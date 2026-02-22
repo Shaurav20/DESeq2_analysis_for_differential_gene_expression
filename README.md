@@ -1,6 +1,6 @@
 # **DESeq2 Differential Gene Expression Analysis (Dexamethasone Treatment Study)**
 
-## 📌 **Overview**
+## **Overview**
 
 This project implements a reproducible RNA-seq differential gene expression (DGE) analysis pipeline using DESeq2 in R.
 The analysis evaluates transcriptional changes induced by dexamethasone treatment, starting from raw read counts and ending with statistically validated results and publication-ready visualizations.
@@ -12,7 +12,7 @@ The analysis evaluates transcriptional changes induced by dexamethasone treatmen
 - Reproducibility
 - Clear documentation of challenges and solutions
 
-## 🗂️ **Project Structure**
+## **Project Structure**
 ```
 ├── analysis_script.R        # Complete DESeq2 analysis & visualization pipeline
 ├── counts_data.csv          # Raw gene count matrix
@@ -25,13 +25,13 @@ The analysis evaluates transcriptional changes induced by dexamethasone treatmen
 └── LICENSE                  # MIT License
 ```
 
-## ⚙️ **Installation**
+## **Installation**
 
-### 🖥️ **System Requirements**
+### **System Requirements**
 - R ≥ 4.0
 - RStudio (recommended)
 
-### 📦 **Required R Packages**
+### **Required R Packages**
 
 install.packages(c("tidyverse", "ggplot2", "pheatmap", "RColorBrewer", "ashr"))
 
@@ -45,7 +45,7 @@ BiocManager::install(c(
   "DEGreport"
 ))
 
-## ▶️ **Usage**
+## **Usage**
 
 ### **1. Place input files in the project directory:**
 
@@ -62,7 +62,7 @@ setwd("path/to/project")
 source("analysis_script.R")
 Outputs will be automatically saved in the results/ directory.
 
-## 🧪 **Methodology**
+## **Methodology**
 
 ### **Data Validation**
 
@@ -100,9 +100,9 @@ Heatmap of top 50 DEGs
 
 Ensembl ID → Gene symbol mapping (human)
 
-## 📊 **Results**
+## **Results**
 
-### 📈 **Generated Outputs**
+### **Generated Outputs**
 
 **Figures (PNG):**
 
@@ -134,13 +134,13 @@ Analysis summaries
 
 All outputs are stored in the results/ directory.
 
-## 🛠️ **Problems and Solutions**
+## **Problems and Solutions**
 
-### ❌ **Problem 1: Noisy differential expression results**
+### **Problem 1: Noisy differential expression results**
 
 Low-count genes caused unstable fold changes and weak clustering.
 
-**✅ Solution**
+**Solution**
 
 Applied gene filtering
 keep <- rowSums(counts(dds) >= 10) >= 3
@@ -151,20 +151,20 @@ vsd <- vst(dds, blind = FALSE)
 **Outcome:** 
 Cleaner PCA separation and more biologically meaningful DE genes.
 
-### ❌ **Problem 2: Blank heatmap image files**
+### **Problem 2: Blank heatmap image files**
 
 The heatmaps were saved as empty PNG files.
 
 Root Cause: pheatmap() uses grid graphics, which require explicit rendering.
 
-**✅ Solution**
+**Solution**
 
 grid::grid.newpage()
 
 **Outcome:** 
 Heatmaps rendered correctly and reproducibly.
 
-## 📚 **References**
+## **References**
 
 Love MI, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biology, 2014.
 
@@ -179,4 +179,12 @@ This project is licensed under the MIT License. You are free to use, modify, and
 ## 👤 **Author**
 
 Shaurav Bhattacharyya
+
+## 👏 **Acknowledgements**
+
+DESeq2 - Love, Huber, Anders (2014)
+
+R/Bioconductor - Open-source community
+
+Gene Ontology & Ensembl - Annotation resources
 

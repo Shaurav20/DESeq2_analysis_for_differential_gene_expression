@@ -172,15 +172,15 @@ R Core Team (2024). R: A language and environment for statistical computing. htt
 
 Bioconductor Project. https://bioconductor.org/
 
-## 📜 **License**
+## **License**
 
 This project is licensed under the MIT License. You are free to use, modify, and distribute this code with appropriate attribution.
 
-## 👤 **Author**
+## **Author**
 
 Shaurav Bhattacharyya
 
-## 👏 **Acknowledgements**
+## **Acknowledgements**
 
 DESeq2 - Love, Huber, Anders (2014)
 

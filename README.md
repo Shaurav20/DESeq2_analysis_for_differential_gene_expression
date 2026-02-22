@@ -177,8 +177,11 @@ Bioconductor Project. https://bioconductor.org/
 This project is licensed under the MIT License. You are free to use, modify, and distribute this code with appropriate attribution.
 
 ## **Author**
-
 Shaurav Bhattacharyya
+
+- GitHub: @Shaurav20 (https://github.com/Shaurav20)
+- LinkedIn: Shaurav Bhattacharyya (https://www.linkedin.com/in/shaurav-bhattacharyya-a347b5156/)
+- Email: shaurav.feb@gmail.com
 
 ## **Acknowledgements**
 
